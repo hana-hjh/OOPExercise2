@@ -4,17 +4,16 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Hello World!");
-
-		Scanner input = new Scanner(System.in);
-
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
-
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
-
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		customerPurchased cpurch;
+		customer1 c1 = new customer1(100, 80);
+		customer2 c2 = new customer2(150, 200);
+		
+		cpurch = c1;
+		System.out.println("Product Purchased: " + cpurch.purchased());
+		System.out.println("Total: " + cpurch.totalPrice());
+		
+		cpurch = c2;
+		System.out.println("Product Purchased: " + cpurch.purchased());
+		System.out.println("Total: " + cpurch.totalPrice());
 	}
 }
